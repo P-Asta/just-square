@@ -1,6 +1,6 @@
 # gameMaking
 - bata
-## programing language
+## programingLanguages
 - html
 - css
 - js
