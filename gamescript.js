@@ -82,9 +82,8 @@ function blockcolider(self){
             if (self.x + self.width - self.endl > player["x"]){
                 if (self.x - self.width + self.endl < player["x"]){
                     player["jumps"]["jump"] = 0;
-                    
-                    player["speeds"]["U"] = 0;
-                    player["speeds"]["D"] = 0;
+                    player["speeds"]["U"] = -1;
+
                     player["y"] = self.y + self.width;
                 }
             }
@@ -98,7 +97,6 @@ function blockcolider(self){
                     player["jumps"]["jump"] = 1;
 
                     player["speeds"]["U"] = 0;
-                    player["speeds"]["D"] = 0;
                     player["y"] = self.y - self.width;
                 }
             }
@@ -227,7 +225,6 @@ function lavacolider(self){
                     player["y"] = 10000;
                     
                     player["speeds"]["U"] = 0;
-                    player["speeds"]["D"] = 0;
                     player["y"] = self.y + self.width;
                 }
             }
@@ -240,7 +237,6 @@ function lavacolider(self){
                     player["y"] = 10000;
 
                     player["speeds"]["U"] = 0;
-                    player["speeds"]["D"] = 0;
                     player["y"] = self.y - self.width;
                 }
             }
@@ -358,7 +354,7 @@ function frame(){
     }
     /*<------------- 기본 코드 ------------->*/
 
-    bg = Math.floor(Math.acos((time) / 70)*100+461463);
+    bg = Math.floor(Math.acos((time) / 70)*100+555599);
     document.getElementById("bg").style.backgroundColor = `#${bg}`;
     client.style.backgroundColor=`#${bg}`;
     
@@ -396,11 +392,12 @@ function frame(){
     }
 
     new end(endObj[0] , endObj[1])
-    // console.log(player["jumps"])
 
     requestAnimationFrame(frame)
     playerMove(player["speeds"]["R"]-player["speeds"]["L"] , player["speeds"]["U"])
     if (player["y"] > 1200){player["x"] = player["resetPos"][0];player["y"] = player["resetPos"][1];}
+
+    // console.log(player["speeds"]["U"]);
 }
 frame();
 
