@@ -6,7 +6,7 @@ https://5-23.github.io/gameMaking/
 ## programingLanguages
 - html
 - css
-- js
+- JS
 ------------
 ## coder
 - 5-23(ME)
