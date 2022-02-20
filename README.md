@@ -1,5 +1,8 @@
 # gameMaking
-- bata
+- varson 0.0.a1
+## gameLink
+https://5-23.github.io/gameMaking/
+
 ## programingLanguages
 - html
 - css
