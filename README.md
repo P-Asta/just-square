@@ -1,7 +1,7 @@
 # gameMaking
 - varson 0.0.a5
 ## gameLink
-<a href = 'http://games.5-23.kro.kr/' target = '_blank'>대충 링크</a>
+<a href = 'http://games.5-23.kro.kr/' target = '_blank'>`http://games.5-23.kro.kr/`</a>
 ## programingLanguages
 - html
 - css
