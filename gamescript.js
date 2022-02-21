@@ -334,7 +334,6 @@ function frame(){
         }
         endObj = [1000,900]
     }
-
     if (lvl == 2){
         player["resetPos"] = [0,430]
         for (i = 0;i<=28;i++){
@@ -354,6 +353,26 @@ function frame(){
 
         endObj = [800,130]
     }
+    if (lvl == 3){
+        player["resetPos"] = [0,430]
+        for (i = 0;i<=28;i++){
+            blockObjs.push([i*64,500]);
+        }
+        for (i = 0;i <= 2;i++){
+            blockObjs.push([600,i*64+130]);
+        }
+        lavaObjs.push([600,430]);
+
+        endObj = [750,450]
+    }
+    if (lvl == 4){
+        player["resetPos"] = [0,430]
+        for (i = 0;i<=28;i++){
+            blockObjs.push([i*64,500]);
+        }
+    }
+
+
     /*<------------- 기본 코드 ------------->*/
 
     bg = Math.floor(Math.acos((time) / 70)*100+555599);
