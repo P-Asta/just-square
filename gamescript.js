@@ -1,4 +1,4 @@
-var client = document.getElementById("game");
+var client = document.getElementById("main");
 var drow = client.getContext("2d");
 
 client.width = 1920;
@@ -6,7 +6,8 @@ client.height = 1070;
 
 inputKey = null
 inputKeys = {}
-lvl = 1
+var lvl = 1
+var oldlvl = 0
 
 player = {
     "color" : "blue",
@@ -150,9 +151,7 @@ function endcolider(self){
         if (self.x > player["x"]){
             if (self.y + self.width - self.endl > player["y"]){
                 if (self.y - self.width + self.endl < player["y"]){
-                    player["y"] = 10000;
-                    player["x"] = 0;
-                    lvl += 1;
+                    location.href = `#${lvl+1}`;
                 }
             }
         }
@@ -161,9 +160,7 @@ function endcolider(self){
         if (self.x < player["x"]){
             if (self.y + self.width - self.endl > player["y"]){
                 if (self.y - self.width + self.endl < player["y"]){
-                    player["y"] = 10000;
-                    player["x"] = 0;
-                    lvl += 1;
+                    location.href = `#${lvl+1}`;
                 }
             }
         }
@@ -172,9 +169,7 @@ function endcolider(self){
         if (self.y < player["y"]){
             if (self.x + self.width - self.endl > player["x"]){
                 if (self.x - self.width + self.endl < player["x"]){
-                    player["y"] = 10000;
-                    player["x"] = 0;
-                    lvl += 1;
+                    location.href = `#${lvl+1}`;
                 }
             }
         }
@@ -183,9 +178,7 @@ function endcolider(self){
         if (self.y > player["y"]){
             if (self.x + self.width - self.endl > player["x"]){
                 if (self.x - self.width + self.endl < player["x"]){
-                    player["y"] = 10000;
-                    player["x"] = 0;
-                    lvl += 1;
+                    location.href = `#${lvl+1}`;
                 }
             }
         }
@@ -320,6 +313,8 @@ time = 0;
 playerMove(0,0);
 function frame(){
     time ++;
+    lvl = Number(location.href.split("#")[1]);
+    if (lvl != oldlvl){player["y"] = 10000;time = 0;}
     blockObjs = [];
     moreJumpObjs = [];
     endObj = [];
@@ -327,6 +322,20 @@ function frame(){
     if (time === 1){console.log("a");SOUNDstart.play();}
     /*<------------- 멥 코드 ------------->*/
     if (lvl == 1){
+        player["resetPos"] = [0,900]
+
+        for (i = 0;i<=28;i++){
+            blockObjs.push([i*64,1000]);
+        }
+
+
+        for (i = 0;i<=2;i++){
+            lavaObjs.push([i*60+100,999])
+        }
+        endObj = [1000,900]
+    }
+
+    if (lvl == 2){
         player["resetPos"] = [0,430]
         for (i = 0;i<=28;i++){
             blockObjs.push([i*64,500]);
@@ -344,13 +353,6 @@ function frame(){
         lavaObjs.push([800,400]);
 
         endObj = [800,130]
-    }
-    if (lvl == 2){
-        player["resetPos"] = [0,900]
-
-        for (i = 0;i<=28;i++){
-            blockObjs.push([i*64,1000]);
-        }
     }
     /*<------------- 기본 코드 ------------->*/
 
@@ -398,6 +400,8 @@ function frame(){
     if (player["y"] > 1200){player["x"] = player["resetPos"][0];player["y"] = player["resetPos"][1];}
 
     // console.log(player["speeds"]["U"]);
+
+    oldlvl = lvl;
 }
 frame();
 
