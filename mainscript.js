@@ -41,7 +41,7 @@ class strtBUTTON{
                         drow.fillStyle = "yellow";
                         if (pointerEvent["on"] == 1){drow.fillStyle = "darkorange"}
                         if (pointerEvent["click"] == 1){
-                            location.href = "game.html";
+                            location.href = "game#1";
                         }
                     }
                 }
