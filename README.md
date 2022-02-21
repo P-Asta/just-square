@@ -1,7 +1,7 @@
 # gameMaking
 - varson 0.0.a5
 ## gameLink
-<a href = 'http://games.5-23.kro.kr/' target = '_blank'>`http://games.5-23.kro.kr/`</a>
+<a href = 'https://just-quare.netlify.app/' target = '_blank'>`https://just-quare.netlify.app/`</a>
 ## programingLanguages
 - html
 - css
