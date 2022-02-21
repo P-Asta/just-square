@@ -1,7 +1,7 @@
 # gameMaking
 - varson 0.0.a1
 ## gameLink
-https://5-23.github.io/gameMaking/
+http://games.5-23.kro.kr/
 
 ## programingLanguages
 - html
