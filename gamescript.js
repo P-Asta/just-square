@@ -40,7 +40,7 @@ player = {
 
 }
 
-var SOUNDstart = new Audio("sounds/enter.wav");
+var SOUNDstart = new Audio("https://github.com/5-23/gameMaking/blob/main/enter.wav?raw=true");
 
 function playerMove(x,y){
     player["x"] += x
