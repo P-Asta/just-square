@@ -1,14 +1,11 @@
 .main{
     position : relative;
     background-color: rgb(255, 174, 0);
-    width : 100%;
 }
 body{
     position : relative;
     background-color: rgb(0, 0, 0);
-    width : 100%;
 }
-
 
 
 body::-webkit-scrollbar { display: none;overflow: hidden ;}
