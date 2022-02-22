@@ -1,6 +1,4 @@
-if (location.href.split("#")[1] == undefined){
-    location.href = "#main";
-}
+console.log(location.href.split("#")[1]);
 
 client = document.getElementById("main");
 drow = client.getContext("2d");
@@ -461,6 +459,14 @@ time = 0;
 
 function frame(){
     lvl = location.href.split("#")[1];
+    if (lvl == undefined){
+        location.href = "#main";
+        document.body.backgroundColor = "#ffee00";
+    }
+    if (lvl == ""){
+        location.href = "#main";
+        document.body.backgroundColor = "#ffee00";
+    }
     time ++;
     if (lvl == "main"){
         drow.clearRect(0 , 0 , client.width , client.height);
@@ -492,7 +498,7 @@ function frame(){
             }
             endObj = [1000,900]
         }
-        if (lvl == 2){
+        else if (lvl == 2){
             player["resetPos"] = [0,430]
             for (i = 0;i<=28;i++){
                 blockObjs.push([i*64,500]);
@@ -504,7 +510,7 @@ function frame(){
 
             endObj = [750,450]
         }
-        if (lvl == 3){
+        else if (lvl == 3){
             player["resetPos"] = [0,430]
             for (i = 0;i<=28;i++){
                 blockObjs.push([i*64,500]);
@@ -523,7 +529,21 @@ function frame(){
 
             endObj = [800,130]
         }
-        if (lvl == 4){
+        else if (lvl == 4){
+            player["resetPos"] = [0,430]
+            for (i = 0;i<=28;i++){
+                blockObjs.push([i*64,500]);
+            }
+            for (i = 0;i<=28;i++){
+                lavaObjs.push([i*64+100,499]);
+                lavaObjs.push([i*64+100,200]);
+            }
+            for (i = 0;i<=5;i++){
+                moreJumpObjs.push([i*250+100,350]);
+            }
+            endObj = [i*250+100,350]
+        }
+        else{
             player["resetPos"] = [0,430]
             for (i = 0;i<=28;i++){
                 blockObjs.push([i*64,500]);
@@ -614,3 +634,9 @@ if (key.key == "w"){
 }
 }
 )
+
+/*<-----------커멘드----------->*/
+function pos(x , y){
+    player["x"] = x;
+    player["y"] = y;
+}
