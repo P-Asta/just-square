@@ -1,5 +1,3 @@
-console.log(location.href.split("#")[1]);
-
 client = document.getElementById("main");
 drow = client.getContext("2d");
 
@@ -176,6 +174,7 @@ player = {
         "max" : 5,
     },
     "jumps": {
+        "setGravity" : 0.1,
         "gravity" : 0.1,
         "power" : 0.5,
         "maxPower" : 3,
@@ -183,7 +182,7 @@ player = {
         "endY" : 0,
         "jump" : 0,
     },
-    "colider" : 10
+    "collider" : 10
 
 }
 
@@ -201,7 +200,7 @@ function playerMove(x,y){
     );
 }
 
-function blockcolider(self){
+function blockcollider(self){
     if (self.x - self.width < player["x"]){
         if (self.x > player["x"]){
             if (self.y + self.width - self.endl > player["y"]){
@@ -240,6 +239,7 @@ function blockcolider(self){
         if (self.y > player["y"]){
             if (self.x + self.width - self.endl > player["x"]){
                 if (self.x - self.width + self.endl < player["x"]){
+                    player["jumps"]["gravity"] = player["jumps"]["setGravity"]
                     player["jumps"]["endY"] = self.y - player["jumps"]["maxGravity"];
                     player["jumps"]["jump"] = 1;
 
@@ -250,11 +250,12 @@ function blockcolider(self){
         }
     }
 }
-function moreJumpcolider(self){
+function moreJumpcollider(self){
     if (self.x - self.width < player["x"]){
         if (self.x > player["x"]){
             if (self.y + self.width - self.endl > player["y"]){
                 if (self.y - self.width + self.endl < player["y"]){
+                    player["jumps"]["gravity"] = player["jumps"]["setGravity"]
                     player["jumps"]["endY"] = self.y - player["jumps"]["maxGravity"];
                     player["jumps"]["jump"] = 1;
                 }
@@ -265,6 +266,7 @@ function moreJumpcolider(self){
         if (self.x < player["x"]){
             if (self.y + self.width - self.endl > player["y"]){
                 if (self.y - self.width + self.endl < player["y"]){
+                    player["jumps"]["gravity"] = player["jumps"]["setGravity"]
                     player["jumps"]["endY"] = self.y - player["jumps"]["maxGravity"];
                     player["jumps"]["jump"] = 1;
                 }
@@ -275,6 +277,7 @@ function moreJumpcolider(self){
         if (self.y < player["y"]){
             if (self.x + self.width - self.endl > player["x"]){
                 if (self.x - self.width + self.endl < player["x"]){
+                    player["jumps"]["gravity"] = player["jumps"]["setGravity"]
                     player["jumps"]["endY"] = self.y - player["jumps"]["maxGravity"];
                     player["jumps"]["jump"] = 1;
                 }
@@ -285,6 +288,7 @@ function moreJumpcolider(self){
         if (self.y > player["y"]){
             if (self.x + self.width - self.endl > player["x"]){
                 if (self.x - self.width + self.endl < player["x"]){
+                    player["jumps"]["gravity"] = player["jumps"]["setGravity"]
                     player["jumps"]["endY"] = self.y - player["jumps"]["maxGravity"];
                     player["jumps"]["jump"] = 1;
                 }
@@ -292,7 +296,7 @@ function moreJumpcolider(self){
         }
     }
 }
-function endcolider(self){
+function endcollider(self){
     if (self.x - self.width < player["x"]){
         if (self.x > player["x"]){
             if (self.y + self.width - self.endl > player["y"]){
@@ -330,7 +334,7 @@ function endcolider(self){
         }
     }
 }
-function lavacolider(self){
+function lavacollider(self){
     if (self.x - self.width < player["x"]){
         if (self.x > player["x"]){
             if (self.y + self.width - self.endl > player["y"]){
@@ -382,7 +386,56 @@ function lavacolider(self){
         }
     }
 }
+function jumpboostercollider(self){
+    if (self.x - self.width < player["x"]){
+        if (self.x > player["x"]){
+            if (self.y + self.width - self.endl > player["y"]){
+                if (self.y - self.width + self.endl < player["y"]){
+                    player["speeds"]["L"] = 0;
+                    player["speeds"]["R"] = 0;
+                    player["x"] = self.x - self.width;
+                }
+            }
+        }
+    }
+    if (self.x + self.width > player["x"]){
+        if (self.x < player["x"]){
+            if (self.y + self.width - self.endl > player["y"]){
+                if (self.y - self.width + self.endl < player["y"]){
+                    player["speeds"]["L"] = 0;
+                    player["speeds"]["R"] = 0;
+                    player["x"] = self.x + self.width;
+                }
+            }
+        }
+    }
+    if (self.y + self.width > player["y"]){
+        if (self.y < player["y"]){
+            if (self.x + self.width - self.endl > player["x"]){
+                if (self.x - self.width + self.endl < player["x"]){
+                    player["jumps"]["jump"] = 0;
+                    player["speeds"]["U"] = -1;
 
+                    player["y"] = self.y + self.width;
+                }
+            }
+        }
+    }
+    if (self.y - self.width < player["y"]){
+        if (self.y > player["y"]){
+            if (self.x + self.width - self.endl > player["x"]){
+                if (self.x - self.width + self.endl < player["x"]){
+                    player["jumps"]["gravity"] = player["jumps"]["setGravity"]/2;
+                    player["jumps"]["endY"] = self.y - player["jumps"]["maxGravity"];
+                    player["jumps"]["jump"] = 1;
+
+                    player["speeds"]["U"] = 0;
+                    player["y"] = self.y - self.width;
+                }
+            }
+        }
+    }
+}
 
 class block{
     constructor(x , y , id , moveX = 0 , moveY = 0){
@@ -390,7 +443,7 @@ class block{
         this.x = x;
         this.y = y;
         this.width = client.width/30;
-        this.endl = player["colider"];
+        this.endl = player["collider"];
 
         drow.fillRect(
             this.x,
@@ -399,7 +452,7 @@ class block{
             this.width
         );
         player["speeds"]["D"] += player["speeds"]["gravity"];
-        blockcolider(this);
+        blockcollider(this);
     }
 }
 class moreJump{
@@ -416,7 +469,7 @@ class moreJump{
             this.width,
             this.width
         );
-        moreJumpcolider(this);
+        moreJumpcollider(this);
     }
 }
 class end{
@@ -433,7 +486,7 @@ class end{
             this.width,
             this.width
         );
-        endcolider(this);
+        endcollider(this);
     }
 }
 class lavablock{
@@ -451,7 +504,25 @@ class lavablock{
             this.width
         );
         player["speeds"]["D"] += player["speeds"]["gravity"];
-        lavacolider(this);
+        lavacollider(this);
+    }
+}
+class jumpbooster{
+    constructor(x , y , id , moveX = 0 , moveY = 0){
+        drow.fillStyle = "gray";
+        this.x = x;
+        this.y = y;
+        this.width = client.width/30;
+        this.endl = player["collider"];
+
+        drow.fillRect(
+            this.x,
+            this.y,
+            this.width,
+            this.width
+        );
+        player["speeds"]["D"] += player["speeds"]["gravity"];
+        jumpboostercollider(this);
     }
 }
 
@@ -483,7 +554,8 @@ function frame(){
         moreJumpObjs = [];
         endObj = [];
         lavaObjs = [];
-        if (time === 1){console.log("a");SOUNDstart.play();}
+        jumpboosterObjs = [];
+        if (time === 1){SOUNDstart.play();}
         /*<------------- 멥 코드 ------------->*/
         if (lvl == 1){
             player["resetPos"] = [0,900]
@@ -543,8 +615,16 @@ function frame(){
             }
             endObj = [i*250+100,350]
         }
-        else{
+        else if (lvl == 5){
             player["resetPos"] = [0,430]
+            for (i = 0;i<=28;i++){
+                blockObjs.push([i*64,500]);
+            }
+            jumpboosterObjs.push([300,450]);
+            blockObjs.push([500,450]);
+        }
+        else{
+            player["resetPos"] = [0,500]
             for (i = 0;i<=28;i++){
                 blockObjs.push([i*64,500]);
             }
@@ -564,7 +644,14 @@ function frame(){
 
         if (player["jumps"]["jump"] == 1){
             if (inputKeys["w"] == 1){if (player["jumps"]["maxPower"] >= player["speeds"]["U"]){player["speeds"]["U"] += player["jumps"]["power"];}else{player["speeds"]["U"] = player["jumps"]["maxPower"];}}
+            
             if (player["jumps"]["endY"] > player["y"]){player["jumps"]["jump"] = 0;}
+
+            // if (player["jumps"]["endY"] >= 449.9){
+            //     if (player["jumps"]["endY"] - 140 > player["y"]){player["jumps"]["jump"] = 0;}
+            // }else{
+            //     if (player["jumps"]["endY"] > player["y"]){player["jumps"]["jump"] = 0;}
+            // }
         }
         
         if (inputKeys["d"] == 1){if (player["speeds"]["max"] >= player["speeds"]["R"]){player["speeds"]["R"] += player["speeds"]["speed"];}else{player["speeds"]["R"] = player["speeds"]["max"];}}
@@ -578,7 +665,14 @@ function frame(){
         if (player["speeds"]["L"] > 0){player["speeds"]["L"] -= player["speeds"]["resistor"];}
         if (player["speeds"]["L"] < 0){player["speeds"]["L"] = 0;}
         
-        if (player["jumps"]["endY"] <= player["y"] - 36.1){player["jumps"]["jump"] = 0;}
+        grv = 36.1;
+        
+        if (player["jumps"]["endY"] <= player["y"] - grv){player["jumps"]["jump"] = 0;}
+        
+        
+        for (i = 0;i < jumpboosterObjs.length; i++){
+            new jumpbooster(jumpboosterObjs[i][0] , jumpboosterObjs[i][1] , i);
+        }
 
         for (i = 0;i < blockObjs.length; i++){
             new block(blockObjs[i][0] , blockObjs[i][1] , i , blockObjs[2]);
@@ -639,4 +733,9 @@ if (key.key == "w"){
 function pos(x , y){
     player["x"] = x;
     player["y"] = y;
+    return (player["x"] = x , player["y"] = y);
+}
+function gravity(number){
+    player["jumps"]["setGravity"] = number;
+    return (["jumps"]["setGravity"]);
 }
