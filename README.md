@@ -6,7 +6,7 @@
 ## ALL
 - <a href = "#varson">varson</a>
 - <a href = "#gameLink">gameLink</a>
-- <a href = "#game description">game description</a>
+- <a href = "#gameDescription">game description</a>
 - <a href = "#programingLanguages">programingLanguages</a>
 - <a href = "#MAKERS">MAKERS</a>
 
@@ -17,7 +17,7 @@
 <a href = 'https://just-quare.netlify.app/' target = '_blank'>`https://just-quare.netlify.app/`</a>
 
 
-# game description
+# gameDescription
 ## Paly
 - Move with **wasd**
 
