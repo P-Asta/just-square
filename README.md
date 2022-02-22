@@ -3,6 +3,12 @@
 - <a href = "#english">english</a>
 -----------------------
 # english
+## ALL
+- <a href = "#varson">varson</a>
+- <a href = "#gameLink">gameLink</a>
+- <a href = "#programingLanguages">programingLanguages</a>
+- <a href = "#MAKERS">MAKERS</a>
+
 ## varson
 - 0.0.a5
 ## gameLink
@@ -11,7 +17,8 @@
 - html
 - css
 - JS
-- 
+
+# MAKERS
 ## coder
 - 5-23(ME)
 ## idear
@@ -36,6 +43,7 @@
 - html
 - css
 - JS
+
 # 만든분들
 ## 코더
 - 5-23(나)
