@@ -30,6 +30,7 @@ function mousepointer(){
         10
     )
 }
+
 class strtBUTTON{
     constructor (x , y , width , height){
         this.x = x;
@@ -106,6 +107,35 @@ class discordBUTTON{
                         if (pointerEvent["on"] == 1){drow.fillStyle = "darkblue"}
                         if (pointerEvent["click"] == 1){
                             window.open("https://discord.com/invite/PjHUKkSJYg", '_blank')
+                        }
+                    }
+                }
+            }
+        }
+        drow.fillRect(
+            this.x,
+            this.y,
+            this.width,
+            this.height
+        )
+    }
+}
+class githubBUTTON{
+    constructor (x , y , width , height){
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+
+        drow.fillStyle = "lavender"
+        if (pointer["x"] > this.x){
+            if (pointer["x"] < this.x+200){
+                if (pointer["y"] > this.y){
+                    if (pointer["y"] < this.y+100){
+                        drow.fillStyle = "white";
+                        if (pointerEvent["on"] == 1){drow.fillStyle = "gray"}
+                        if (pointerEvent["click"] == 1){
+                            window.open("https://github.com/5-23/just-square", '_blank')
                         }
                     }
                 }
@@ -435,8 +465,9 @@ function frame(){
     if (lvl == "main"){
         drow.clearRect(0 , 0 , client.width , client.height);
         new strtBUTTON(800,300 , 200 , 100);
-        new youtubeBUTTON(1800,10 , 100 , 100);
-        new discordBUTTON(1800,120 , 100 , 100);
+        new githubBUTTON(1800,10 , 100 , 100);
+        new youtubeBUTTON(1800,120 , 100 , 100);
+        new discordBUTTON(1800,230 , 100 , 100);
         mousepointer();
     }
     else{
