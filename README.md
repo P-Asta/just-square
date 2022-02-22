@@ -37,8 +37,17 @@
 
 ## 버전
 - 0.0.a5
+
 ## 게임링크
 <a href = 'https://just-quare.netlify.app/' target = '_blank'>`https://just-quare.netlify.app/`</a>
+
+# 게임설명
+## 플레이
+- **wasd**로 움직일수 있다
+## 블럭설명
+- 힌색블럭 : 
+
+
 ## 프로그래밍언어
 - html
 - css
