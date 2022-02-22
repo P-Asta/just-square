@@ -6,13 +6,27 @@
 ## ALL
 - <a href = "#varson">varson</a>
 - <a href = "#gameLink">gameLink</a>
+- <a href = "#game description">game description</a>
 - <a href = "#programingLanguages">programingLanguages</a>
 - <a href = "#MAKERS">MAKERS</a>
 
 ## varson
 - 0.0.a5
+
 ## gameLink
 <a href = 'https://just-quare.netlify.app/' target = '_blank'>`https://just-quare.netlify.app/`</a>
+
+
+# game description
+## Paly
+- Move with **wasd**
+
+## block description
+- 'White Block': You can jump in the air.
+- 'Black Block': It's just a block
+- 'Red Block' : Die
+- 'Green Block': go to the next step
+
 ## programingLanguages
 - html
 - css
@@ -32,6 +46,7 @@
 ## 모두
 - <a href = "#버전">버전</a>
 - <a href = "#게임링크">게임링크</a>
+- <a href = "#게임설명">게임설명</a>
 - <a href = "#프로그래밍언어">프로그래밍언어</a>
 - <a href = "#만든분들">만든분들</a>
 
@@ -44,8 +59,12 @@
 # 게임설명
 ## 플레이
 - **wasd**로 움직일수 있다
+
 ## 블럭설명
-- 힌색블럭 : 
+- `힌색블럭` : 공중에서 점프를 할수있다
+- `검정블럭` : 그냥 블럭이다
+- `빨간블럭` : 죽는다
+- `초록블럭` : 다음단계로 넘어간다
 
 
 ## 프로그래밍언어
