@@ -18,14 +18,14 @@
 
 
 # gameDescription
-## Paly
+## Play
 - Move with **wasd**
 
 ## block description
-- `White Block` : You can jump in the air.
-- `Black Block` : It's just a block
 - `Red Block` : Die
 - `Green Block` : go to the next step
+- `Black Block` : It's just a block
+- `White Block` : You can jump in the air.
 - `Gray Block` : hight jump
 
 ## programingLanguages
