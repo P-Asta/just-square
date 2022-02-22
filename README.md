@@ -26,6 +26,7 @@
 - `Black Block` : It's just a block
 - `Red Block` : Die
 - `Green Block` : go to the next step
+- `Gray Block` : hight jump
 
 ## programingLanguages
 - html
@@ -61,10 +62,11 @@
 - **wasd**로 움직일수 있다
 
 ## 블럭설명
-- `흰색블럭` : 공중에서 점프를 할수있다
-- `검정블럭` : 그냥 블럭이다
 - `빨간블럭` : 죽는다
 - `초록블럭` : 다음단계로 넘어간다
+- `검정블럭` : 그냥 블럭이다
+- `흰색블럭` : 공중에서 점프를 할수있다
+- `회색블럭` : 높은 점프
 
 
 ## 프로그래밍언어
