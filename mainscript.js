@@ -780,3 +780,12 @@ function gravity(number){
     player["jumps"]["setGravity"] = number;
     return (["jumps"]["setGravity"]);
 }
+function resistor(number){
+    player["speeds"]["resistor"] = number;
+}
+function speed(number){
+    player["speeds"]["speed"] = number;
+}
+function maxSpeed(number){
+    player["speeds"]["max"] = number;
+}
