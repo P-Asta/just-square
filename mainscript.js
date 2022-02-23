@@ -634,7 +634,7 @@ function frame(){
             jumpboosterObjs.push([300,450]);
         }
         else{
-            player["resetPos"] = [0,500]
+            player["resetPos"] = [0,400]
             for (i = 0;i<=28;i++){
                 blockObjs.push([i*64,500]);
             }
