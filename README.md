@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1f5e8987-d328-49bf-8412-9b70b5f5c3a2/deploy-status)](https://app.netlify.com/sites/just-quare/deploys)
 # languages
 - <a href = "#한국어">한국어</a>
 - <a href = "#english">english</a>
@@ -14,8 +15,7 @@
 - 0.0.a5
 
 ## gameLink
-<a href = 'https://just-quare.netlify.app/' target = '_blank'>[![Netlify Status](https://api.netlify.com/api/v1/badges/1f5e8987-d328-49bf-8412-9b70b5f5c3a2/deploy-status)](https://app.netlify.com/sites/just-quare/deploys)
-`https://just-quare.netlify.app/`</a>
+<a href = 'https://just-quare.netlify.app/' target = '_blank'>`https://just-quare.netlify.app/`</a>
 
 
 # gameDescription
