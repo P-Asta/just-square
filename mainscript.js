@@ -558,6 +558,38 @@ function frame(){
         if (time === 1){SOUNDstart.play();}
         /*<------------- 멥 코드 ------------->*/
         if (lvl == 1){
+            player["resetPos"] = [0,830]
+            for (i = 0;i<=30;i++){
+                blockObjs.push([i*64,900]);
+            }
+            for (i = 0;i<=2;i++){
+                blockObjs.push([400 , i*64 + 760])
+            }
+            for (i = 0;i<=25;i++){
+                blockObjs.push([i*64+400,760]);
+            }
+            for (i = 0;i<=28;i++){
+                blockObjs.push([i*64+400,760]);
+            }
+            for (i = 0;i<=25;i++){
+                blockObjs.push([i*64+700,620]);
+            }
+            for (i = 0;i<=2;i++){
+                blockObjs.push([700 , i*64 + 620])
+            }
+            for (i = 0;i<=25;i++){
+                blockObjs.push([i*64+800,320]);
+            }
+            for (i = 0;i<=10;i++){
+                moreJumpObjs.push([760 , i*32 + 320])
+            }
+
+
+            endObj = [1500 , 200]
+            jumpboosterObjs.push([300,890]);
+            jumpboosterObjs.push([600,750]);
+        }
+        else if (lvl == 2){
             player["resetPos"] = [0,900]
 
             for (i = 0;i<=28;i++){
@@ -570,7 +602,7 @@ function frame(){
             }
             endObj = [1000,900]
         }
-        else if (lvl == 2){
+        else if (lvl == 3){
             player["resetPos"] = [0,430]
             for (i = 0;i<=28;i++){
                 blockObjs.push([i*64,500]);
@@ -582,7 +614,7 @@ function frame(){
 
             endObj = [750,450]
         }
-        else if (lvl == 3){
+        else if (lvl == 4){
             player["resetPos"] = [0,430]
             for (i = 0;i<=28;i++){
                 blockObjs.push([i*64,500]);
@@ -601,7 +633,7 @@ function frame(){
 
             endObj = [800,130]
         }
-        else if (lvl == 4){
+        else if (lvl == 5){
             player["resetPos"] = [0,430]
             for (i = 0;i<=28;i++){
                 blockObjs.push([i*64,500]);
@@ -615,7 +647,7 @@ function frame(){
             }
             endObj = [i*250+100,350]
         }
-        else if (lvl == 5){
+        else if (lvl == 6){
             player["resetPos"] = [0,430]
             for (i = 0;i<=28;i++){
                 blockObjs.push([i*64,500]);
@@ -683,12 +715,11 @@ function frame(){
         for (i = 0;i < jumpboosterObjs.length; i++){
             new jumpbooster(jumpboosterObjs[i][0] , jumpboosterObjs[i][1] , i);
         }
-
-        for (i = 0;i < blockObjs.length; i++){
-            new block(blockObjs[i][0] , blockObjs[i][1] , i , blockObjs[2]);
-        }
         for (i = 0;i < moreJumpObjs.length; i++){
             new moreJump(moreJumpObjs[i][0] , moreJumpObjs[i][1] , i);
+        }
+        for (i = 0;i < blockObjs.length; i++){
+            new block(blockObjs[i][0] , blockObjs[i][1] , i , blockObjs[2]);
         }
         for (i = 0;i < lavaObjs.length; i++){
             new lavablock(lavaObjs[i][0] , lavaObjs[i][1] , i);
