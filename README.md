@@ -69,6 +69,12 @@
 - `흰색블럭` : 공중에서 점프를 할수있다
 - `회색블럭` : 높은 점프
 
+## 커멘드설명
+- `pos(x , y)` : 플레이어의 좌표를 이동시킨다
+- `gravity(number)` : 중력을 로 정한다 기본값[0.1]
+- `speed(number)` : 속도를 number로 정한다 기본값[0.15]
+- `maxSpeed(number)` : 최대속도를 number로 정한다 기본값[3]
+
 
 ## 프로그래밍언어
 <img src="https://img.shields.io/badge/Javascript-000000?style=flat-square&logo=Javascript&logoColor=white"/></a>
