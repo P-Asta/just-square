@@ -29,7 +29,13 @@
 - `White Block` : You can jump in the air.
 - `Gray Block` : hight jump
 
-## programingLanguages
+## Command Description
+- `pos(x , y)` : move the player's coordinates
+- `gravity(number)` : Set gravity to Default [0.1]
+- `speed(number)` : set the speed to number Default [0.15]
+- `maxSpeed(number)` : Sets the maximum speed as number Default [3]
+
+# programingLanguages
 <img src="https://img.shields.io/badge/Javascript-000000?style=flat-square&logo=Javascript&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/html-000000?style=flat-square&logo=html5&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/css-000000?style=flat-square&logo=css3&logoColor=white"/></a>
