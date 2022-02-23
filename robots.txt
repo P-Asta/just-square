@@ -1,2 +1,4 @@
 User-agent: *Allow:/
 Sitemap: https://just-quare.netlify.app/sitemap.xml
+Allow: main.css
+Allow: mainscript.js
