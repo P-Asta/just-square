@@ -648,6 +648,22 @@ function frame(){
             endObj = [i*250+100,350]
         }
         else if (lvl == 6){
+            player["resetPos"] = [0,430]
+            for (i = 0;i<=28;i++){
+                blockObjs.push([i*64,500]);
+            }
+            for (i = 0;i<=28;i++){
+                lavaObjs.push([i*64+100,499]);
+            }
+            for (i = 0;i<=28;i++){
+                blockObjs.push([i*64,500]);
+            }
+            for (i = 0;i <= 2;i++){
+            }
+            endObj = [i*250+390,370];
+            jumpboosterObjs.push([300,450]);
+        }
+        else if (lvl == 7){
             player["resetPos"] = [55,0];
             for (i = 0;i<=10;i++){
                 lavaObjs.push([120,50*i-300]);
@@ -674,22 +690,6 @@ function frame(){
 
             blockObjs.push([500,310])
             endObj = [190,0]
-        }
-        else if (lvl == 7){
-            player["resetPos"] = [0,430]
-            for (i = 0;i<=28;i++){
-                blockObjs.push([i*64,500]);
-            }
-            for (i = 0;i<=28;i++){
-                lavaObjs.push([i*64+100,499]);
-            }
-            for (i = 0;i<=28;i++){
-                blockObjs.push([i*64,500]);
-            }
-            for (i = 0;i <= 2;i++){
-            }
-            endObj = [i*250+390,370];
-            jumpboosterObjs.push([300,450]);
         }
         else if (lvl == 8){
             player["resetPos"] = [0,430]
