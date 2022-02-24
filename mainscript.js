@@ -540,6 +540,7 @@ function frame(){
     }
     time ++;
     if (lvl == "main"){
+        // document.getElementById("css").href = "main.css";
         drow.clearRect(0 , 0 , client.width , client.height);
         new strtBUTTON(800,300 , 200 , 100);
         new githubBUTTON(1800,10 , 100 , 100);
@@ -548,6 +549,8 @@ function frame(){
         mousepointer();
     }
     else{
+        document.getElementById("main").style.width = `100%`;
+
         lvl = Number(lvl);
         if (lvl != oldlvl){player["y"] = 10000;time = 0;}
         blockObjs = [];
