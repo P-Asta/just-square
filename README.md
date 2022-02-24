@@ -15,7 +15,7 @@
 - 0.0.a5
 
 ## gameLink
-<a href = 'https://just-quare.netlify.app/' target = '_blank'>`https://just-quare.netlify.app/`</a>
+<a href = 'https://just-square.netlify.app/' target = '_blank'>`https://just-square.netlify.app/`</a>
 
 
 # gameDescription
@@ -62,7 +62,7 @@
 - 0.0.a5
 
 ## 게임링크
-<a href = 'https://just-quare.netlify.app/' target = '_blank'>`https://just-quare.netlify.app/`</a>
+<a href = 'https://just-square.netlify.app/' target = '_blank'>`https://just-square.netlify.app/`</a>
 
 # 게임설명
 ## 플레이
