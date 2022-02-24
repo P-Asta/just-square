@@ -681,8 +681,36 @@ function frame(){
             endObj = [i*250+400,370];
             jumpboosterObjs.push([300,450]);
         }
+        else if (lvl == 8){
+            player["resetPos"] = [55,0];
+            for (i = 0;i<=10;i++){
+                lavaObjs.push([120,50*i-300]);
+            }
+            blockObjs.push([60,65]);
+            blockObjs.push([160,160]);
+            for (i = 0;i<=28;i++){
+                blockObjs.push([i*64,500]);
+            }
+            for (i = 0;i<=3;i++){
+                lavaObjs.push([i*64,499]);
+            }
+            moreJumpObjs.push([100,350])
+            moreJumpObjs.push([100,380])
+            moreJumpObjs.push([100,410])
+            moreJumpObjs.push([540,310])
+            moreJumpObjs.push([200,160])
+
+            jumpboosterObjs.push([500,490])
+
+            lavaObjs.push([500,320])
+            lavaObjs.push([500,321])
+            lavaObjs.push([500,319])
+
+            blockObjs.push([500,310])
+            endObj = [190,0]
+        }
         else{
-            player["resetPos"] = [0,400]
+            player["resetPos"] = [0,400];
             for (i = 0;i<=28;i++){
                 blockObjs.push([i*64,500]);
             }
