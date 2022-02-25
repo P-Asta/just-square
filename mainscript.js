@@ -787,7 +787,7 @@ function frame(){
         
         oldlvl = lvl;
         playerMove(player["speeds"]["R"]-player["speeds"]["L"] , player["speeds"]["U"])
-        if (player["y"] > 1200){player["x"] = player["resetPos"][0];player["y"] = player["resetPos"][1];time = 0;}
+        if (player["y"] > 1200){player["x"] = player["resetPos"][0];player["y"] = player["resetPos"][1];}
     }
 
     requestAnimationFrame(frame);
