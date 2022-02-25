@@ -566,6 +566,16 @@ function frame(){
             for (i = 0;i<=30;i++){
                 blockObjs.push([i*64,900]);
             }
+            for (i = 0;i<=30;i++){
+                blockObjs.push([i*64+100,600]);
+            }
+            for (i = 0;i<=10;i++){
+                moreJumpObjs.push([60,i*30+600])
+            }
+            moreJumpObjs.push([300,535])
+            jumpboosterObjs.push([600,535])
+            lavaObjs.push([900,535])
+            endObj = [1200,535]
         }
         else if (lvl == 1){
             player["resetPos"] = [0,830]
@@ -742,12 +752,6 @@ function frame(){
             if (inputKeys["w"] == 1){if (player["jumps"]["maxPower"] >= player["speeds"]["U"]){player["speeds"]["U"] += player["jumps"]["power"];}else{player["speeds"]["U"] = player["jumps"]["maxPower"];}}
             
             if (player["jumps"]["endY"] > player["y"]){player["jumps"]["jump"] = 0;}
-
-            // if (player["jumps"]["endY"] >= 449.9){
-            //     if (player["jumps"]["endY"] - 140 > player["y"]){player["jumps"]["jump"] = 0;}
-            // }else{
-            //     if (player["jumps"]["endY"] > player["y"]){player["jumps"]["jump"] = 0;}
-            // }
         }
         
         if (inputKeys["d"] == 1){if (player["speeds"]["max"] >= player["speeds"]["R"]){player["speeds"]["R"] += player["speeds"]["speed"];}else{player["speeds"]["R"] = player["speeds"]["max"];}}
@@ -783,7 +787,7 @@ function frame(){
         
         oldlvl = lvl;
         playerMove(player["speeds"]["R"]-player["speeds"]["L"] , player["speeds"]["U"])
-        if (player["y"] > 1200){player["x"] = player["resetPos"][0];player["y"] = player["resetPos"][1];}
+        if (player["y"] > 1200){player["x"] = player["resetPos"][0];player["y"] = player["resetPos"][1];time = 0;}
     }
 
     requestAnimationFrame(frame);
