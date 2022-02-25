@@ -547,6 +547,7 @@ function frame(){
         new youtubeBUTTON(1800,120 , 100 , 100);
         new discordBUTTON(1800,230 , 100 , 100);
         mousepointer();
+        document.getElementById("main").style.width = "";
     }
     else{
         document.getElementById("main").style.width = `100%`;
@@ -560,7 +561,13 @@ function frame(){
         jumpboosterObjs = [];
         if (time === 1){SOUNDstart.play();}
         /*<------------- 멥 코드 ------------->*/
-        if (lvl == 1){
+        if (lvl == 0){
+            player["resetPos"] = [0,830]
+            for (i = 0;i<=30;i++){
+                blockObjs.push([i*64,900]);
+            }
+        }
+        else if (lvl == 1){
             player["resetPos"] = [0,830]
             for (i = 0;i<=30;i++){
                 blockObjs.push([i*64,900]);
