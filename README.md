@@ -12,7 +12,7 @@
 - <a href = "#MAKERS">MAKERS</a>
 
 ## varson
-- 0.0.a5
+- 0.0.a9
 
 ## gameLink
 <a href = 'https://just-square.netlify.app/' target = '_blank'>`https://just-square.netlify.app/`</a>
@@ -61,7 +61,7 @@
 - <a href = "#만든분들">만든분들</a>
 
 ## 버전
-- 0.0.a5
+- 0.0.a9
 
 ## 게임링크
 <a href = 'https://just-square.netlify.app/' target = '_blank'>`https://just-square.netlify.app/`</a>
