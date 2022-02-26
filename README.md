@@ -1,6 +1,5 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1f5e8987-d328-49bf-8412-9b70b5f5c3a2/deploy-status)](https://app.netlify.com/sites/just-quare/deploys)
-#a
-<rect x="0" y="0" width="155" height="30" style="stroke: none; fill: url(#gradient-461404712); mask: url(#sparkline-461404712)"></rect>
+
 # languages
 - <a href = "#한국어">한국어</a>
 - <a href = "#english">english</a>
@@ -102,3 +101,4 @@
 ## 모두
 - 5-23(나)
 - 어피치#8592
+<rect x="0" y="0" width="155" height="30" style="stroke: none; fill: url(#gradient-461404712); mask: url(#sparkline-461404712)"></rect>
