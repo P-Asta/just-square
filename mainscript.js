@@ -729,6 +729,26 @@ function frame(){
             endObj = [i*250+400,370];
             jumpboosterObjs.push([300,450]);
         }
+        else if (lvl == 9){
+            player["resetPos"] = [0,430]
+            for (i = 0;i<=28;i++){
+                blockObjs.push([i*64,500]);
+            }
+            for (i = 0;i<=6;i++){
+                lavaObjs.push([629.8,i*64+52]);
+            }
+            for (i = 0;i<=4;i++){
+                lavaObjs.push([500,i*64+52]);
+            }
+            for (i = 0;i<=2;i++){
+                lavaObjs.push([650+i*64,52]);
+            }
+            jumpboosterObjs.push([565,436]);
+            for (i = 0;i<=2;i++){
+                moreJumpObjs.push([578,i*100+10]);
+            }
+            endObj = [1200,400];
+        }
         else{
             player["resetPos"] = [0,400];
             for (i = 0;i<=28;i++){
